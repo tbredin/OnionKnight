@@ -87,9 +87,9 @@ Siegmeyer filestructure
 
     SCSS >
 
-        screen-modern.scss (compiles all scss for modern browsers)
+        screen-modern.scss (compiles optimised scss for modern browsers)
 
-        screen-legacy.scss (compiles all scss for IE8 and below)
+        screen-legacy.scss (compiles optimised scss for IE8 and below)
 
         Base >
 
@@ -147,17 +147,6 @@ Example HTML
 
 ```HTML
 
-    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
-    <link rel="icon" type="image/png" href="/images/favicon.png" />
-
-    <!-- Standard iPhone -->
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/images/favicon-low-57.png" />
-    <!-- Retina iPhone -->
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/favicon-high-114.png" />
-    <!-- Standard iPad -->
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/favicon-low-72.png" />
-    <!-- Retina iPad -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/favicon-high-144.png" />
 
     <!--[if !IE]> -->
         <?= css('/css/screen-modern.css') ?>
