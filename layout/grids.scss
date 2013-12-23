@@ -1,12 +1,11 @@
 /**
  * Any Custom grid classes
  *
- * @author Thomas Bredin-Grey <thomas@panmedia.co.nz>
- * @author Hemi Ormsby <hemi@panmedia.co.nz>
- * @url https://github.com/tbredin/OnionKnight
+ * @author Thomas Bredin-Grey <tbredin@gmail.com>
+ * @url https://github.com/tbredin/Siegmeyer
  */
 
-@include xsb-grid(6, 6, 8);
-@include xsb-grid(6, 3, 4);
-@include xsb-grid(6, 4, 6);
-@include xsb-grid(6, 8, 10);
+@include sm-grid(6, 6, 8);
+@include sm-grid(6, 3, 4);
+@include sm-grid(6, 4, 6);
+@include sm-grid(6, 8, 10);

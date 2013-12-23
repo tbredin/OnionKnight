@@ -1,9 +1,8 @@
 /**
  * Any non-site-specific tools and code snippets
  *
- * @author Thomas Bredin-Grey <thomas@panmedia.co.nz>
- * @author Hemi Ormsby <hemi@panmedia.co.nz>
- * @url https://github.com/tbredin/OnionKnight
+ * @author Thomas Bredin-Grey <tbredin@gmail.com>
+ * @url https://github.com/tbredin/Siegmeyer
  */
 
 // Returns a unitless number
@@ -220,13 +219,6 @@
 
 // heading font
 %heading-font { font-family: $heading-font; }
-
-
-// common padding
-%standard-padding {
-    padding: 10/16 * $grid-padding $grid-padding $grid-padding;
-    // (by default: 10/16 * 16 (base font size) = 10px top padding)
-}
 
 
 // better than writing longhand rgba for transparent black
@@ -451,22 +443,6 @@
 }
 
 
-//initialises pan picturefill helper css
-//this is required for responsive images to work (and can be included below)
-@mixin picture-init($classname: picture) {
-    .#{$classname} {
-        font-family: "0" !important;
-        @include at-breakpoint($above-medium) {
-            font-family: "#{no-unit($medium-width)}" !important;
-        }
-        @include at-breakpoint($above-large) {
-            font-family: "#{no-unit($large-width)}" !important;
-        }
-    }
-}
-
-//@include picture-init;
-
 %border-radius {
     @include border-radius($border-radius);
 }
@@ -553,13 +529,6 @@
 }
 
 
-// cross browser rem font sizes
-@mixin rem-font-size($size: 12 ){
-    font-size: $size + px; //fallback for old browsers
-    font-size: ($size / no-unit($base-font-size)) + rem;
-}
-
-
 //text shadow extends
 %dark-text-shadow { @include text-shadow(rgba(0, 0, 0, 0.3) -1px -1px 0); }
 %light-text-shadow { @include text-shadow(rgba(255, 255, 255, 0.0) -1px -1px 0); }
@@ -575,11 +544,11 @@
 
 
 // XMod Site builder Grids
-@mixin xsb-grid($sml, $med, $lrg, $context-sml: false, $context-med: false, $context-lrg: false) {
+@mixin sm-grid($sml, $med, $lrg, $context-sml: false, $context-med: false, $context-lrg: false) {
     //check if context has been passed
     @if $context-sml == false and $context-med == false and $context-lrg == false {
         //gen classes
-        .xsb-grid__#{$sml}-#{$med}-#{$lrg} {
+        .sm-grid__#{$sml}-#{$med}-#{$lrg} {
             @include span-columns($sml);
 
             @include at-breakpoint($above-medium) {
@@ -589,7 +558,7 @@
                 @include span-columns($lrg, $large-cols);
             }
         }
-        .xsb-grid__#{$sml}-#{$med}-#{$lrg}_omega {
+        .sm-grid__#{$sml}-#{$med}-#{$lrg}_omega {
             @include span-columns($sml omega);
             @include at-breakpoint($above-medium) {
                 @include span-columns($med omega, $medium-cols);
@@ -611,7 +580,7 @@
         }
 
         //gen classes
-        .xsb-grid__#{$sml}-#{$med}-#{$lrg}--#{$context-sml}-#{$context-med}-#{$context-lrg} {
+        .sm-grid__#{$sml}-#{$med}-#{$lrg}--#{$context-sml}-#{$context-med}-#{$context-lrg} {
             @include span-columns($sml, $context-sml);
 
             @include at-breakpoint($above-medium) {
@@ -621,7 +590,7 @@
                 @include span-columns($lrg, $context-lrg);
             }
         }
-        .xsb-grid__#{$sml}-#{$med}-#{$lrg}--#{$context-sml}-#{$context-med}-#{$context-lrg}_omega {
+        .sm-grid__#{$sml}-#{$med}-#{$lrg}--#{$context-sml}-#{$context-med}-#{$context-lrg}_omega {
             @include span-columns($sml omega, $context-sml);
             @include at-breakpoint($above-medium) {
                 @include span-columns($med omega, $context-med);
@@ -653,34 +622,3 @@
     }
 }
 
-
-//breadcrumbs
-@mixin breadcrumbs($color) {
-    .xmod-bread-crumb {
-        padding-top: 1em;
-        font-family: $heading-font;
-        font-size: px-to-ems(14px);
-        color: $color;
-
-        a {
-            color: $color;
-            font-family: $heading-font;
-            text-decoration: none;
-            opacity: 0.75;
-            @include transition(opacity 0.2s linear);
-
-            &:hover {
-                opacity: 0.85;
-                text-decoration: underline;
-            }
-
-            &:last-child {
-                opacity: 1;
-
-                &:hover {
-                    opacity: 1;
-                }
-            }
-        }
-    }
-}

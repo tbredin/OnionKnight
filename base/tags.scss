@@ -1,9 +1,8 @@
 /**
  * Any Typography and bare tag styles
  *
- * @author Thomas Bredin-Grey <thomas@panmedia.co.nz>
- * @author Hemi Ormsby <hemi@panmedia.co.nz>
- * @url https://github.com/tbredin/OnionKnight
+ * @author Thomas Bredin-Grey <tbredin@gmail.com>
+ * @url https://github.com/tbredin/Siegmeyer
  */
 
 body, html {
@@ -86,7 +85,7 @@ h4 {
 h5 {
     @include adjust-font-size-to($h5-size);
     @include rhythm(0, 1, 0.5, 0, $h5-size);
-    
+
     + h6 {
         @extend %heading-group;
     }
@@ -115,12 +114,12 @@ p {
 a:hover { text-decoration: none; }
 
 hr {
-    //draw top & bottom borders 
+    //draw top & bottom borders
     border-top-color: white(0.5);
     border-bottom-color: black(0.5);
     border-style: solid none;
     height: 0;
-    
+
     //retain vertical rhythm by enabling the following styles. Will break some libraries if not scoped properly!
     //@include leading-border(1px, 0.5);
     //@include trailing-border(1px, 0.5);
@@ -129,7 +128,7 @@ hr {
 ul {
     list-style: disc outside;
     padding-left: $base-font-size;
-} 
+}
 
 ol {
     list-style: decimal outside;
