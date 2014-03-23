@@ -31,25 +31,25 @@ including: Resets, Variables, Tag Styles / Basic Typography
 
 
 **Layout rules**
-Layouts divide the page into sections. Layouts hold one or more modules together.
+ divide the page into sections. Layouts hold one or more modules together.
 including: Grid modules, any common layout patterns
 *eg: grids.scss, layout-patterns.scss*
 
 
 **Modules**
-Modules are the reusable, modular parts of our design. They are the callouts, the sidebar sections, the product lists and so on. Modules sit inside Layout components. Modules can sometimes sit within other Modules, too. Each Module should be designed to exist as a standalone component.
+ are the reusable, modular parts of our design. They are the callouts, the sidebar sections, the product lists and so on. Modules sit inside Layout components. Modules can sometimes sit within other Modules, too. Each Module should be designed to exist as a standalone component.
 including: Blocks & Elements - any visual characteristics needed to describe these (NOT layout - extend a layout pattern from above). 
 *eg: modules.scss, [module-name].scss*
 
 
 **State rules**
-States are ways to describe how our modules or layouts will look when in a particular state. Is it hidden or expanded? Is it active or inactive? They are about describing how a module or layout looks on screens at different sizes. States are also used to describe how a module might look in different views like the home page or the inside page. A state is something that augments or overrides other styles.
+ are ways to describe how our modules or layouts will look when in a particular state. Is it hidden or expanded? Is it active or inactive? They are about describing how a module or layout looks on screens at different sizes. States are also used to describe how a module might look in different views like the home page or the inside page. A state is something that augments or overrides other styles.
 including: Modifiers/overrides
 *eg: button-states.scss, notification-states.scss*
 
 
 **Theme rules**
-Themes are similar to state rules in that they describe how modules or layouts *might* look. Most sites don’t require a layer of theming but it is good to be aware of it.
+ are similar to state rules in that they describe how modules or layouts *might* look. Most sites don’t require a layer of theming but it is good to be aware of it.
 including: Overrides
 *eg: happy-holidays-theme.scss*
 
