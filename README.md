@@ -19,7 +19,7 @@ There are five types of categories:
     Base
     Layout
     Module
-    State (?)
+    State
     Theme
 
 
@@ -38,21 +38,21 @@ including: Grids, any common layout patterns
 
 **Modules**
 are the reusable, modular parts of our design. They are the callouts, the sidebar sections, the product lists and so on. Modules sit inside Layout components. Modules can sometimes sit within other Modules, too. Each Module should be designed to exist as a standalone component.
-including: Blocks & Elements - any visual characteristics needed to describe these (NOT layout - extend a layout pattern from above)
-*eg: modules.scss*
+including: Blocks & Elements - any visual characteristics needed to describe these (NOT layout - extend a layout pattern from above). 
+*eg: modules.scss, [module-name].scss*
 
 
 **State rules**
 are ways to describe how our modules or layouts will look when in a particular state. Is it hidden or expanded? Is it active or inactive? They are about describing how a module or layout looks on screens that are smaller or bigger. They are also about describing how a module might look in different views like the home page or the inside page. A state is something that augments and overrides all other styles.
 including: Modifiers/overrides
 *eg: button-states.scss, notification-states.scss*
-NOTE: this folder is currently under review and may soon be scrapped (combined with module folder for better maintainability)
+NOTE: this folder is currently under review and may soon be scrapped (combined with module folder for better object-oriented maintainability)
 
 
 **Theme rules**
 are similar to state rules in that they describe how modules or layouts *might* look. Most sites don’t require a layer of theming but it is good to be aware of it.
 including: Overrides
-*eg: mothers-day-theme.scss*
+*eg: happy-holidays-theme.scss*
 
 
 BEM Naming Conventions
@@ -70,6 +70,7 @@ Written as:
 ```CSS
     .block-name__element-name_modifier-key_modifier-value
 ```
+
 
 **Block**
 A block is an independent entity, a "building block" of an application. A block can be either simple or compound (containing other blocks).
@@ -96,10 +97,9 @@ Siegmeyer filestructure
             Snippets >
 
                 common.scss (non-site-specific tools & modules)
+                ...
 
             variables.scss
-
-            reset.scss
 
             fonts.scss
 
@@ -115,15 +115,13 @@ Siegmeyer filestructure
 
             common-modules.scss (site specific blocks)
 
-            homepage.scss
+            contact-module.scss
 
-            contact.scss
-
-            products-page.scss
+            products-list.scss
 
             e-commerce-modules.scss
 
-            logical-part-of-the-site.scss (and so on...)
+            component-set.scss (and so on...)
 
         State (modifiers) >
 
@@ -131,15 +129,12 @@ Siegmeyer filestructure
 
             notification-states.scss
 
-            and so on... (hovers, actives, tag states, opened, hidden, etc?)
+            and so on... (hovers, actives, tag states, opened, hidden, etc)
 
-        Themes (IE stylesheets count as a theme)
+        Themes
 
             example-holiday.scss
 
-            IEx.scss
-
-        shame.scss (included last)
 
 
 Example HTML
