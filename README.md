@@ -5,7 +5,7 @@ SCSS Framework for BEM / SMACSS projects (and the bravest warrior in all of Lord
 
 **Dependencies:**
 Compass http://compass-style.org
-Susy http://susy.oddbird.net/
+Susy One http://susy.oddbird.net/
 
 
 SMACSS Architecture
