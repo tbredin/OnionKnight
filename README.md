@@ -3,10 +3,8 @@ Siegmeyer
 
 A Front End SCSS Boilerplate using BEM / SMACSS principles
 
-**Dependencies:**
-
-Compass http://compass-style.org
-
+**Dependencies:**    
+Compass http://compass-style.org    
 Susy One http://susy.oddbird.net/
 
 
