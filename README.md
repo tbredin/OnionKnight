@@ -1,7 +1,7 @@
 Siegmeyer
 ===========
 
-SCSS Framework for BEM / SMACSS projects (and the bravest warrior in all of Lordran)
+A Front End SCSS Boilerplate using BEM / SMACSS principles
 
 **Dependencies:**
 Compass http://compass-style.org
