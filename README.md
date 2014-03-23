@@ -25,32 +25,31 @@ There are five types of categories:
 
 
 **Base rules**
-are the defaults. They are almost exclusively single element selectors but it could include attribute selectors, pseudo-class selectors, child selectors or sibling selectors. Essentially, a base style says that wherever this element is on the page, it should look like this.
-including: Resets, Variables, Tag Styles / Basic Typography, Non-site-specific Modules
+Base are the defaults. They are almost exclusively single element selectors but it could include attribute selectors, pseudo-class selectors, child selectors or sibling selectors. Essentially, a base style says that wherever this element is on the page, it should look like this.
+including: Resets, Variables, Tag Styles / Basic Typography
 *eg: reset.scss, variables.scss, tags.scss, global-modules.scss*
 
 
 **Layout rules**
-divide the page into sections. Layouts hold one or more modules together.
-including: Grids, any common layout patterns
+Layouts divide the page into sections. Layouts hold one or more modules together.
+including: Grid modules, any common layout patterns
 *eg: grids.scss, layout-patterns.scss*
 
 
 **Modules**
-are the reusable, modular parts of our design. They are the callouts, the sidebar sections, the product lists and so on. Modules sit inside Layout components. Modules can sometimes sit within other Modules, too. Each Module should be designed to exist as a standalone component.
+Modules are the reusable, modular parts of our design. They are the callouts, the sidebar sections, the product lists and so on. Modules sit inside Layout components. Modules can sometimes sit within other Modules, too. Each Module should be designed to exist as a standalone component.
 including: Blocks & Elements - any visual characteristics needed to describe these (NOT layout - extend a layout pattern from above). 
 *eg: modules.scss, [module-name].scss*
 
 
 **State rules**
-are ways to describe how our modules or layouts will look when in a particular state. Is it hidden or expanded? Is it active or inactive? They are about describing how a module or layout looks on screens that are smaller or bigger. They are also about describing how a module might look in different views like the home page or the inside page. A state is something that augments and overrides all other styles.
+States are ways to describe how our modules or layouts will look when in a particular state. Is it hidden or expanded? Is it active or inactive? They are about describing how a module or layout looks on screens at different sizes. States are also used to describe how a module might look in different views like the home page or the inside page. A state is something that augments or overrides other styles.
 including: Modifiers/overrides
 *eg: button-states.scss, notification-states.scss*
-NOTE: this folder is currently under review and may soon be scrapped (combined with module folder for better object-oriented maintainability)
 
 
 **Theme rules**
-are similar to state rules in that they describe how modules or layouts *might* look. Most sites don’t require a layer of theming but it is good to be aware of it.
+Themes are similar to state rules in that they describe how modules or layouts *might* look. Most sites don’t require a layer of theming but it is good to be aware of it.
 including: Overrides
 *eg: happy-holidays-theme.scss*
 
